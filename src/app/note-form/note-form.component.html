@@ -1,0 +1,16 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form #noteForm="ngForm">
+        <div class="form-group">
+          <label for="detail">Detail</label>
+          <input type="text" [(ngModel)]="note.noteDetail" 
+            class="form-control" 
+            id="address" 
+            name="address" 
+            placeholder="Enter note"
+            required #name="ngModel">
+        </div>
+        <button type="submit" (click)="addNote()" [disabled]="!noteForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

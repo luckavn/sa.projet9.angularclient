@@ -1,0 +1,23 @@
+<div class="nameBanner">Selected patient : {{ patient.givenName }} {{ patient.familyName }}.</div>
+<div class="card my-5">
+    <div class="card-body">
+        <a [routerLink]="['/addnote', patientId]"><button class="btn btn-info">Add note</button></a><a [routerLink]="['/calculaterisk', patientId]"><button class="btn">Calculate risk</button></a>
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Note detail</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let note of notes">
+            <td>{{ note.noteId }}</td>
+            <td>{{ note.noteDetail }}</td>
+            <td><a [routerLink]="['/modifynote', note.noteId]"><button class="btn">Modify</button></a><a [routerLink]="['/deletenote', note.noteId]"><button class="btn">Delete</button></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
