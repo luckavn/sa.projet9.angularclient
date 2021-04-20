@@ -1,0 +1,62 @@
+<div class="card my-5">
+    <div class="card-body" *ngIf="patient">
+      <form (ngSubmit)="onSubmit()" #patientModifyForm="ngForm">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" [(ngModel)]="patient.address" 
+            class="form-control" 
+            id="address" 
+            name="address" 
+            placeholder="Enter your address"
+            required #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of birth</label>
+          <input type="date" [(ngModel)]="patient.dob" 
+            class="form-control" 
+            id="dob" 
+            name="dob" 
+            placeholder="Enter your date of birth"
+            required #email="ngModel">
+        </div>
+         <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="patient.familyName" 
+            class="form-control" 
+            id="name" 
+            name="name" 
+            placeholder="Enter your name"
+            required #email="ngModel">
+        </div>
+         <div class="form-group">
+          <label for="firstname">First name</label>
+          <input type="text" [(ngModel)]="patient.givenName" 
+            class="form-control" 
+            id="firstname" 
+            name="firstname" 
+            placeholder="Enter your first name"
+            required #email="ngModel">
+        </div>
+         <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" [(ngModel)]="patient.phone" 
+            class="form-control" 
+            id="phone" 
+            name="phone" 
+            placeholder="Enter your phone"
+            required #email="ngModel">
+        </div>
+         <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text" [(ngModel)]="patient.sex" 
+            class="form-control" 
+            id="gender" 
+            name="gender" 
+            placeholder="Enter your sex"
+            required #email="ngModel">
+        </div>
+        <button type="submit" [disabled]="!patientModifyForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
