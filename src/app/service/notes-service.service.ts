@@ -11,7 +11,7 @@ export class NoteService {
   currentNote: Note;
 
   constructor(private http: HttpClient) {
-    this.notesUrl = 'http://localhost:8080/notes';
+    this.notesUrl = 'http://gatewayapi:8080/notes';
   }
 
   public findById(id:string): Observable<Note[]> {

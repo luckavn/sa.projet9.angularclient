@@ -10,7 +10,7 @@ export class PatientService {
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) {
-    this.patientsUrl = 'http://localhost:8080/patient';
+    this.patientsUrl = 'http://gatewayapi:8080/patient';
   }
 
   public findAll(): Observable<Patient[]> {

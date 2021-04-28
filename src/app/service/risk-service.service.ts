@@ -10,7 +10,7 @@ export class RiskService {
   private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) {
-    this.riskUrl = 'http://localhost:8080/risk';
+    this.riskUrl = 'http://gatewayapi:8080/risk';
   }
 
   public calculateRiskFromPatientId(id:string): Observable<Risk> {
